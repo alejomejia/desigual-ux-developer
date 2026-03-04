@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { Header } from "@/components/header";
 import { fontSans } from "@/lib/styles/fonts";
 import { cn } from "@/lib/utils/helpers";
 
@@ -18,7 +19,10 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={cn("antialased", fontSans.variable)}>
-        {children}
+        <Header />
+        <main className="font-sans">
+          {children}
+        </main>
       </body>
     </html>
   );
