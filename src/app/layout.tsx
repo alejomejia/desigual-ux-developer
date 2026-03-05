@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils/helpers";
 import "@/lib/styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "[Product x] | Desigual.",
+  title: "[Product X] | Desigual.",
   description: "[Product description]",
 };
 
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={cn("antialased", fontSans.variable)}>
+      <body className={cn("min-h-screen antialased text-brand-black", fontSans.variable)}>
         <Header />
         <main className="font-sans">
           {children}
