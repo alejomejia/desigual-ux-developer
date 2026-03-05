@@ -45,8 +45,8 @@ export function ProductGallery() {
             className="w-full object-cover object-center"
             src={src}
             alt={alt ?? ""}
-            width={720}
-            height={862}
+            width={2160}
+            height={2586}
           />
         )
       })}
