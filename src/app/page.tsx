@@ -19,7 +19,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex-1 basis-1/2 mt-10 p-6 md:p-10">
+      <div className="w-full flex-1 basis-1/2 mt-10 p-6 md:p-10">
         <SizeGuideModal />
       </div>
     </div>
