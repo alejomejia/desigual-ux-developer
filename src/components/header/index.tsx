@@ -5,14 +5,14 @@ import { HeaderShopMenu } from "./header-shop-menu";
 
 export function Header() {
   return (
-    <header className="w-full h-10 border-b border-brand-gray uppercase text-xs">
-      <div className="w-full h-full max-w-360 mx-auto flex gap-12">
+    <header className="absolute top-0 left-0 right-0 z-10 bg-white w-full h-10 px-10 border-b border-brand-gray uppercase text-xs">
+      <div className="w-full h-full flex gap-6">
         <div className="flex-1 flex gap-12">
           <HeaderCategoriesMenu />
           <HeaderAnnouncement />
         </div>
         <div className="flex">
-          <div className="min-w-34 border-r border-brand-gray">
+          <div className="min-w-34 mr-4 border-r border-brand-gray">
             <HeaderSearch />
           </div>
           <HeaderShopMenu />
