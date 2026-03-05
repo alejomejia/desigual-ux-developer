@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Desigual UX Developer Technical Test
 
-## Getting Started
+This repository contains a small frontend project implemented as a **technical test for the Desigual UX Developer position**.  
+The goal of this project is to demonstrate:
 
-First, run the development server:
+- **Strong UI/UX skills**: layout structure, hierarchy, visual consistency, and usability.
+- **Pixel-perfect implementation**: careful attention to spacing, typography, alignment, and responsiveness.
+- **Clean, modern React architecture**: functional components, clear props, and reusable UI patterns.
+
+All the UI and implementation work in this project was done **manually, without using AI**, in order to properly showcase my own skills and attention to detail.
+
+The **only places where AI was used are**:
+
+- **This `README.md`**: drafted with AI assistance for clearer documentation.
+- **`bodySizesIn` data in `src/components/size-guide-modal/tabs.tsx`**: a copy of the `bodySizesCm` table converted from centimeters to inches, purely as static data.
+
+Everything else in the codebase (structure, components, logic, layout, styling, and interactions) was implemented manually to better reflect my UI knowledge and pixel-perfect work.
+
+---
+
+## Tech Stack
+
+- **Framework**: Next.js / React (functional components)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS (utility-first styling and layout)
+
+---
+
+## Running the Project Locally
+
+Make sure you have **Node.js** (LTS version recommended) and **npm** or **pnpm/yarn** installed.
+
+1. **Install dependencies**
+
+```bash
+npm install
+# or
+pnpm install
+# or
+yarn
+```
+
+2. **Run the development server**
 
 ```bash
 npm run dev
 # or
-yarn dev
-# or
 pnpm dev
 # or
-bun dev
+yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Open the app in your browser**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The development server usually runs at:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```text
+http://localhost:3000
+```
 
-## Learn More
+Open this URL in your browser to view and test the UI.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- The size guide and tabs implementation, as well as the rest of the UI, were crafted to reflect **Desigual’s product experience** with a focus on clarity and consistency.
+- The project is intentionally kept focused so it’s easy to review the **interaction design, layout decisions, and code quality**.
+- Some layout structure decisions are based on my own assumptions by looking at the Figma file.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
