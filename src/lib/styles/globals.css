@@ -4,11 +4,18 @@
   --color-brand-black: #020202;
   --color-brand-salmon: #FF7C6A;
   --color-brand-gray: #DEE2E6;
+  --color-brand-gray-200: #E5E3E1;
   /* hexadecimal #B2A5FF */
   --color-brand-melrose: 178, 165, 255;
 }
 
 @layer base {
+
+  html,
+  body {
+    overscroll-behavior: none;
+  }
+
   ::-webkit-scrollbar-thumb {
     background-color: rgb(var(--color-brand-melrose));
   }
