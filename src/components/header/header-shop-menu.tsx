@@ -57,7 +57,7 @@ function ShopMenuItem({ item }: { item: ShopItem }) {
     return (
       <button className="cursor-pointer px-1.5 h-full flex gap-1 items-center" onClick={item.onClick} type="button">
         <Icon className="size-6" />
-        <span className="uppercase">{item.label}</span>
+        <span className="hidden xl:block uppercase">{item.label}</span>
       </button>
     )
   }
@@ -65,7 +65,7 @@ function ShopMenuItem({ item }: { item: ShopItem }) {
   return (
     <Link className="px-1.5 h-full flex gap-1 items-center" href={item.href}>
       <Icon className="size-6" />
-      <span>{item.label}</span>
+      <span className="hidden xl:block">{item.label}</span>
     </Link>
   )
 }
@@ -73,7 +73,7 @@ function ShopMenuItem({ item }: { item: ShopItem }) {
 export function HeaderShopMenu() {
   return (
     <nav className="h-full">
-      <ul className="h-full flex items-center gap-2.5">
+      <ul className="h-full flex items-center gap-1 md:gap-2.5">
         {HEADER_SHOP_ITEMS.map((item) => (
           <li key={item.id} className="h-full">
             <ShopMenuItem item={item} />

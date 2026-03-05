@@ -21,7 +21,7 @@ export function RadioGroup({
   }
 
   return (
-    <form className="flex gap-4 items-center text-xs">
+    <form className="flex items-center text-xs">
       {options.map((option) => (
         <RadioOption
           key={option.value}

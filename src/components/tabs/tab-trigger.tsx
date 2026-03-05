@@ -19,7 +19,7 @@ export function TabTrigger({ value, children }: TabTriggerProps) {
       role="tab"
       aria-selected={isActive}
       className={cn(
-        "cursor-pointer border-b pb-0.5",
+        "cursor-pointer border-b pb-0.5 text-nowrap",
         "uppercase text-xs",
         {
           "border-b-brand-black": isActive,

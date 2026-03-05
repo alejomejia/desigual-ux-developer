@@ -11,12 +11,12 @@ export function HeaderAnnouncement() {
       href="#"
       className={cn(
         "w-full max-w-122 h-full px-4",
-        "flex gap-2 justify-center items-center",
+        "hidden lg:flex gap-2 justify-center items-center",
         "bg-brand-salmon/80",
         "group/announcement"
       )}>
       <span>{ANNOUNCEMENT_MESSAGE}</span>
-      <IconPlusCircle className="size-3" />
+      <IconPlusCircle className="shrink-0 size-3" />
     </Link>
   )
 }

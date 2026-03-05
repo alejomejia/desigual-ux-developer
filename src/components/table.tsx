@@ -1,17 +1,20 @@
 /** biome-ignore-all lint/suspicious/noArrayIndexKey: There is no need to add complex keys for the table cells */
 
+import { cn } from "@/lib/utils/helpers"
+
 type TableProps = {
   data: {
     headers: string[],
     rows: string[][]
-  }
+  },
+  className?: string
 }
 
-export function Table({ data }: TableProps) {
+export function Table({ data, className }: TableProps) {
   const { headers, rows } = data
 
   return (
-    <table className="w-full border-collapse text-xs">
+    <table className={cn("w-full border-collapse text-xs overflow-x-scroll", className)}>
       <thead className="border-b border-brand-black h-9.5">
         <tr>
           {headers.map(h => <th key={h} className="font-normal">{h}</th>)}
@@ -26,5 +29,6 @@ export function Table({ data }: TableProps) {
           </tr>
         ))}
       </tbody>
-    </table>)
+    </table>
+  )
 }

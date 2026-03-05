@@ -51,13 +51,11 @@ export function SizeGuideTabs() {
 
   return (
     <Tabs defaultValue="international-sizes">
-      <div className="flex justify-between items-center gap-4 min-h-8">
-        <div>
-          <Tabs.List>
-            <Tabs.Tab value="international-sizes">Tallas Internacionales</Tabs.Tab>
-            <Tabs.Tab value="body-sizes">Medidas Del Cuerpo</Tabs.Tab>
-          </Tabs.List>
-        </div>
+      <div className="flex justify-between flex-wrap items-center gap-4 min-h-8">
+        <Tabs.List>
+          <Tabs.Tab value="international-sizes">Tallas Internacionales</Tabs.Tab>
+          <Tabs.Tab value="body-sizes">Medidas Del Cuerpo</Tabs.Tab>
+        </Tabs.List>
         <Tabs.Panel value="body-sizes">
           <div className="flex gap-2.5 items-center text-xs">
             <span>Ver medidas en:</span>
@@ -74,19 +72,25 @@ export function SizeGuideTabs() {
         </Tabs.Panel>
       </div>
 
-      <Tabs.Panel value="international-sizes" className="py-20">
+      <Tabs.Panel value="international-sizes" className="py-10 md:py-20">
         <div className="w-full max-w-81 mx-auto overflow-x-auto">
           <Table data={internationalSizes} />
         </div>
       </Tabs.Panel>
 
-      <Tabs.Panel value="body-sizes" className="py-20">
-        <div className="flex justify-between items-center gap-15 px-8">
-          <div className="shrink-0">
-            <Image width={145} height={301} src="/assets/body-sizes-guide.png" alt="Diagrama de guía de tallas que muestra las medidas del cuerpo: A pecho, B cintura y C cadera." />
+      <Tabs.Panel value="body-sizes" className="py-10 md:py-20">
+        <div className="flex justify-between items-center flex-wrap gap-x-15 gap-y-5 md:px-8">
+          <div className="shrink-0 w-full sm:w-auto flex justify-center mx-auto">
+            <Image
+              className="block mx-auto"
+              src="/assets/body-sizes-guide.png"
+              alt="Diagrama de guía de tallas que muestra las medidas del cuerpo: A pecho, B cintura y C cadera."
+              width={145}
+              height={301}
+            />
           </div>
-          <div className="flex-1">
-            <Table data={bodySizeDataset} />
+          <div className="flex-1 overflow-x-auto sm:overflow-x-visible">
+            <Table data={bodySizeDataset} className="min-w-80" />
           </div>
         </div>
       </Tabs.Panel>

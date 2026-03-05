@@ -1,5 +1,7 @@
 import { cn } from "@/lib/utils/helpers"
+
 import { Link } from "../link"
+import { HeaderMobileMenu } from "./header-mobile-menu"
 
 const HEADER_CATEGORIES_ITEMS = [
   {
@@ -20,9 +22,14 @@ const HEADER_CATEGORIES_ITEMS = [
 ]
 
 export function HeaderCategoriesMenu() {
+
+
   return (
     <nav className="h-full">
-      <ul className="h-full flex items-center gap-5.5">
+      <div className="h-full block sm:hidden">
+        <HeaderMobileMenu />
+      </div>
+      <ul className="hidden sm:flex h-full items-center gap-3 md:gap-5.5">
         {HEADER_CATEGORIES_ITEMS.map(({ id, href, label }, index) => {
           // Active items must be compared by current path and href
           // In this case just for UI work, I'm gonna use index based active classname
